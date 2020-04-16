@@ -1,0 +1,11 @@
+# Getting and Cleaning Data Course Project
+
+dActTest, dActTrain, dFeaTest, dFeaTrain, dSubTest and dSubTrain read data from dataset files. 
+
+dSub, dAct, dFea combine above data.
+
+dFeaNames read data from features.
+
+Data is combined dataframe of all data.
+
+selectedNames is used to subset data from with mean and sd data measurements. 

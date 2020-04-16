@@ -1,0 +1,31 @@
+# Getting and Cleaning Data Course Project
+
+
+### Initial Data for Research Project
+
+
+Data is extracted UCI HAR Dataset. The following files are used from the dataset:
+
+1. features.txt - includes the descriptions for features measured
+2. Features files 1 - train/X_train.txt - includes the measurements of the features in train set (one row - 1 measurement of 561 features)
+3. Features file 2 - test/X_test.txt - includes the measurements of the features in test set
+4. Subject file 1 - train/subject_train.txt - subject for each measurement from the train set
+5. Subject file 2 -test/subject_test.txt - subject for each measurement from the test set
+6. Activity file 1 - train/y_train.txt - activity (from 1 to 6) for each measurement from the train set
+7. Activity file 2 - test/y_test.txt - activity (from 1 to 6) for each measurement from the test set
+
+
+### How the script works
+
+
+It is assumed that the dataset is in the directory and it is unzipped. Further, the data is read from above files 2-7 an saved in six different variables.
+
+The data for "subject" files are concatenated into one data frame. Same is done for "activity" files and "features" files.
+
+Feature names are extracted from file 1. Names are det for "subject" data and "activity" data. All files are combined with feature names to get one data frame. (Step 1: Merges the training and the test sets to create one data set.)
+
+Names of features are subset by measurements of mean and standard deviation. Further, main data frame is subset by above selected features. (Step 2: Extracts only the measurements on the mean and standard deviation for each measurement.)
+
+Descriptive activity labels are derived from another text file and proper names are substituted such as Gyroscope for Gyro to label dataset. (Step 3: Uses descriptive activity names to name the activities in the data set.) (Step 4: Appropriately labels the data set with descriptive variable names.)
+
+New files is written with tidy data. (Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.)
